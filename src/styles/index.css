@@ -17,6 +17,14 @@ html {
   font-weight: bold;
 }
 
+.right {
+  color: green;
+}
+
+.wrong {
+  color: red;
+}
+
 p {
   font-size: 1.8rem;
 }/*# sourceMappingURL=index.css.map */
