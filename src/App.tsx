@@ -6,9 +6,10 @@ import Header from "./components/Header";
 import Input from "./components/Input";
 
 const App = memo(()=>{
-    const [cloud_index, setClouIndex] = useState(Math.floor((Math.random()*WORD_CLOUD.length)))
+    const [cloud_index, setClouIndex] = useState(WORD_CLOUD[Math.floor((Math.random()*WORD_CLOUD.length))].split(" "))
 
     const [state,setState] = useState('')
+    const [active_word_index, setActiveWordIndex] = useState(0)
 
     const handleChange = (value:string) =>{
         setState(value)
@@ -19,8 +20,11 @@ const App = memo(()=>{
     return(
         <>
             <Header heading='React Typing Speed Game'/>
-            <Paragraph text={WORD_CLOUD[cloud_index].split(" ")}/>
-            <Input state={state} handleChange={handleChange}/>
+            <Paragraph
+                text={cloud_index}
+                active_word_index={active_word_index}
+            />
+            {/* <Input state={state} handleChange={handleChange}/> */}
         </>
     )
 })
