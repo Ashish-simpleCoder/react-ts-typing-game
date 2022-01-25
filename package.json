@@ -1,5 +1,6 @@
 {
-  "name": "react_typescript_typing_speed_game",
+  "name": "react_ts_typing_game",
+  "homepage": "https://ashish-simplecoder.github.io/react-typing/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +13,7 @@
     "typescript": "^4.5.5"
   },
   "scripts": {
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -34,5 +36,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
