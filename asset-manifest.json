@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-typing/static/css/main.f741d422.css",
+    "main.js": "/react-typing/static/js/main.7da4baa4.js",
+    "index.html": "/react-typing/index.html",
+    "main.f741d422.css.map": "/react-typing/static/css/main.f741d422.css.map",
+    "main.7da4baa4.js.map": "/react-typing/static/js/main.7da4baa4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f741d422.css",
+    "static/js/main.7da4baa4.js"
+  ]
+}
