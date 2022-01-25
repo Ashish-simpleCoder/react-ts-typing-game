@@ -13,18 +13,82 @@ html {
   height: 100%;
 }
 
+body {
+  background: #1a1a1a;
+  color: #e6e6e6;
+}
+
+main, header {
+  padding: 0.8rem clamp(1rem,3rem,3vw);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+}
+main button {
+  margin: auto;
+  min-width: 10rem;
+  background: #570a6e;
+  border: none;
+  color: #e6e6e6;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  transition: all 0.3s;
+}
+main button:active {
+  transform: scale(0.8);
+}
+
+header h1 {
+  font-weight: 400;
+  font-size: clamp(2.2rem,2.5rem,2.5vw);
+}
+
+main > div {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main > div h2, main > div span {
+  font-weight: 400;
+  font-size: clamp(1.8rem,1.9rem,1.9vw);
+  color: fuchsia;
+}
+main > div span {
+  color: green;
+}
+
+main p {
+  font-size: clamp(1.8rem,1.9rem,1.9vw);
+  margin-top: 3rem;
+  font-weight: 300;
+}
+
+main input {
+  background: #262626;
+  border: none;
+  padding: 0.5rem clamp(0rem,1rem,1vw);
+  font-size: clamp(1.8rem,1.9rem,1.9vw);
+  margin-top: 2rem;
+  width: 100%;
+  outline: none;
+  color: #e6e6e6;
+  border-radius: 0.3rem;
+}
+
 .active {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .right {
   color: green;
+  font-weight: 500;
 }
 
 .wrong {
   color: red;
-}
-
-p {
-  font-size: 1.8rem;
 }/*# sourceMappingURL=index.css.map */
