@@ -7,7 +7,7 @@ import Input from "./components/Input";
 
 const randomNumber =  () => Math.floor((Math.random()*WORD_CLOUD.length))
 const App = memo(()=>{
-    const [cloud_index, setCloudIndex] = useState(WORD_CLOUD[randomNumber()].split(" "))
+    const [cloud_index, setCloudIndex] = useState(()=>WORD_CLOUD[randomNumber()].split(" "))
 
     const [state,setState] = useState('')
     const [active_word_index, setActiveWordIndex] = useState(0)

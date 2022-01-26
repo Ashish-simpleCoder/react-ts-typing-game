@@ -78,6 +78,7 @@ main input {
   outline: none;
   color: #e6e6e6;
   border-radius: 0.3rem;
+  max-width: 25rem;
 }
 
 .active {
