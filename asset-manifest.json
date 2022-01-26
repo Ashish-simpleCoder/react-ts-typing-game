@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-ts-typing-game/static/css/main.b4644972.css",
-    "main.js": "/react-ts-typing-game/static/js/main.7da4baa4.js",
+    "main.css": "/react-ts-typing-game/static/css/main.847b6016.css",
+    "main.js": "/react-ts-typing-game/static/js/main.cb9bd389.js",
     "index.html": "/react-ts-typing-game/index.html",
-    "main.b4644972.css.map": "/react-ts-typing-game/static/css/main.b4644972.css.map",
-    "main.7da4baa4.js.map": "/react-ts-typing-game/static/js/main.7da4baa4.js.map"
+    "main.847b6016.css.map": "/react-ts-typing-game/static/css/main.847b6016.css.map",
+    "main.cb9bd389.js.map": "/react-ts-typing-game/static/js/main.cb9bd389.js.map"
   },
   "entrypoints": [
-    "static/css/main.b4644972.css",
-    "static/js/main.7da4baa4.js"
+    "static/css/main.847b6016.css",
+    "static/js/main.cb9bd389.js"
   ]
 }
