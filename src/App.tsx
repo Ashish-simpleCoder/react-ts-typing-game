@@ -1,11 +1,10 @@
 import "./styles/index.css"
-import { memo, useEffect, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 import Paragraph from "./components/Paragraph"
 import WORD_CLOUD from './utils/word_cloud'
 import Header from "./components/Header";
 import Input from "./components/Input";
 
-const randomNumber =  () => Math.floor((Math.random()*WORD_CLOUD.length))
 const App = memo(()=>{
     const [cloud_index, setCloudIndex] = useState(()=>WORD_CLOUD[randomNumber()].split(" "))
 
@@ -22,6 +21,7 @@ const App = memo(()=>{
         if(active_word_index > cloud_index.length-1){
             setTotalTime(0)
             setTimeout(()=>alert('your typing speed is '+Math.round((total_right_words*60)/total_time)+' wpm'),1000)
+            generateRandomPara.current()
             timer && clearInterval(timer)
             setTypedWordsArr([])
             setActiveWordIndex(0)
@@ -50,7 +50,7 @@ const App = memo(()=>{
         }
     }
 
-    const generateRandomPara = () =>{
+    const generateRandomPara = useRef(()=>{
         setCloudIndex(WORD_CLOUD[randomNumber()].split(" "))
         setActiveWordIndex(0)
         setState('')
@@ -58,7 +58,7 @@ const App = memo(()=>{
         setTotalRightWords(0)
         setTotalTime(0)
         setTypedWordsArr([])
-    }
+    })
 
 
 
@@ -76,10 +76,14 @@ const App = memo(()=>{
                     typed_words_arr={typed_words_arr}
                 />
                 <Input state={state} handleChange={handleChange} placeholder="type here to begin the game"/>
-                <button onClick={generateRandomPara}>restart the game</button>
+                <button onClick={generateRandomPara.current}>restart the game</button>
             </main>
 
         </>
     )
 })
 export default App
+
+
+
+const randomNumber =  () => Math.floor((Math.random()*WORD_CLOUD.length))
