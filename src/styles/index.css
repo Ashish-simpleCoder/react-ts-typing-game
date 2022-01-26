@@ -14,12 +14,16 @@ html {
 }
 
 body {
-  background: #1a1a1a;
+  background: #121212;
   color: #e6e6e6;
 }
 
 main, header {
   padding: 0.8rem clamp(1rem,3rem,3vw);
+}
+
+header {
+  background: #1a1a1a;
 }
 
 main {
@@ -30,10 +34,11 @@ main {
 main button {
   margin: auto;
   min-width: 10rem;
-  background: #570a6e;
+  background: #580a70;
   border: none;
   color: #e6e6e6;
-  padding: 1rem 2rem;
+  padding: 1rem clamp(1rem,1rem,1vw);
+  font-size: clamp(1.8rem,1.9rem,1.9vw);
   cursor: pointer;
   border-radius: 0.3rem;
   transition: all 0.3s;
@@ -56,7 +61,7 @@ main > div {
 main > div h2, main > div span {
   font-weight: 400;
   font-size: clamp(1.8rem,1.9rem,1.9vw);
-  color: fuchsia;
+  color: #b816e9;
 }
 main > div span {
   color: green;
@@ -69,16 +74,16 @@ main p {
 }
 
 main input {
-  background: #262626;
+  background: #1a1a1a;
   border: none;
-  padding: 0.5rem clamp(0rem,1rem,1vw);
+  padding: 1rem clamp(1rem,1rem,1vw);
   font-size: clamp(1.8rem,1.9rem,1.9vw);
   margin-top: 2rem;
   width: 100%;
   outline: none;
   color: #e6e6e6;
   border-radius: 0.3rem;
-  max-width: 25rem;
+  max-width: 40rem;
 }
 
 .active {

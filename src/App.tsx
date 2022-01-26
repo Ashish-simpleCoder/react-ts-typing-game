@@ -22,9 +22,7 @@ const App = memo(()=>{
         if(active_word_index > cloud_index.length-1){
             setTotalTime(0)
             setTimeout(()=>alert('your typing speed is '+Math.round((total_right_words*60)/total_time)+' wpm'),1000)
-            if(timer){
-                clearInterval(timer)
-            }
+            timer && clearInterval(timer)
             setTypedWordsArr([])
             setActiveWordIndex(0)
             setTotalRightWords(0)
@@ -52,6 +50,16 @@ const App = memo(()=>{
         }
     }
 
+    const generateRandomPara = () =>{
+        setCloudIndex(WORD_CLOUD[randomNumber()].split(" "))
+        setActiveWordIndex(0)
+        setState('')
+        timer && clearInterval(timer)
+        setTotalRightWords(0)
+        setTotalTime(0)
+        setTypedWordsArr([])
+    }
+
 
 
     return(
@@ -68,7 +76,7 @@ const App = memo(()=>{
                     typed_words_arr={typed_words_arr}
                 />
                 <Input state={state} handleChange={handleChange} placeholder="type here to begin the game"/>
-                <button onClick={()=>setCloudIndex(WORD_CLOUD[randomNumber()].split(" "))}>change the content</button>
+                <button onClick={generateRandomPara}>restart the game</button>
             </main>
 
         </>
