@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+todo.md
+*/**/*.dev.ts
+*/**/*.dev.js
+*/**/*.dev.tsx
+*/**/*.dev.test.tsx
+*/**/*.dev.test.js
+*/**/*.dev.test.jsx
+*/**/*.dev.html
+*/**/*.dev.md
