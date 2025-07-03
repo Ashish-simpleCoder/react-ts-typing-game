@@ -1,7 +1,11 @@
+import TypingContainer from './components/common/typing-container'
+import Header from './components/layouts/header'
+
 export default function App() {
    return (
       <div>
-         <h1 className='text-red-700 p-4 text-3xl'>Vite + Tailwind + React</h1>
+         <Header />
+         <TypingContainer />
       </div>
    )
 }

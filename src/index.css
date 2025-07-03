@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+   background-color: rgb(39, 39, 39);
+   color: white;
+}
+
+@keyframes caretAnimation {
+   from {
+      opacity:1;
+   }
+   to{
+      opacity:0;
+   }
+}
